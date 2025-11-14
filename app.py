@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# CSV generado por Spark: .../spark-proyecto/data/vehiculos_agg.csv
+# CSV generado por Spark: .../PaginaWebCarros-Spark/data/vehiculos_agg.csv
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(BASE_DIR)
 CSV_PATH = os.path.join(ROOT_DIR, "data", "vehiculos_agg.csv")
@@ -96,4 +96,4 @@ def dashboard():
 
 if __name__ == "__main__":
     print("Usando CSV:", CSV_PATH)
-    app.run(host="0.0.0.0", port=8081, debug=False)
+    app.run(host="192.168.100.4", port=8081, debug=False)

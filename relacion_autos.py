@@ -13,8 +13,8 @@ spark = SparkSession.builder \
 # ===========================
 # 1️. Cargar los archivos CSV
 # ===========================
-ruta_autos = "/home/vagrant/SparkAutos/autos_limpiov8.csv"
-ruta_calificaciones = "/home/vagrant/SparkAutos/calificaciones.csv"
+ruta_autos = "/home/vagrant/PaginaWebCarros-Spark/autos_limpiov8.csv"
+ruta_calificaciones = "/home/vagrant/PaginaWebCarros-Spark/calificaciones.csv"
 
 autos_df = spark.read.option("header", True).csv(ruta_autos)
 calificaciones_df = spark.read.option("header", True).csv(ruta_calificaciones)
@@ -47,7 +47,7 @@ resultado_df = union_df.select(
 # 5️. Guardar resultado
 # ===========================
 # Guardar como un solo archivo CSV
-ruta_salida = "/home/vagrant/SparkAutos/autos_relacionados.csv"
+ruta_salida = "/home/vagrant/PaginaWebCarros-Spark/autos_relacionados.csv"
 
 # Para que Spark no genere múltiples part-xxxxx.csv
 resultado_df.coalesce(1).write.option("header", True).mode("overwrite").csv(ruta_salida)
