@@ -74,7 +74,7 @@ Como calificaciones registra el id del vehículo necesitamos relacionar el id co
 
 Hay que lanzar una nueva aplicación spark en la ruta donde se encuentra la carpeta spark-submit (spark-4.0.1-bin-hadoop3/bin) con los siguientes comandos:
 
---master spark://192.168.100.3:7077 \
+--master spark://192.168.100.4:7077 \
 /home/vagrant/PaginaWebCarros-Spark/analisis_final_spark.py
 
 y luego lanzar el dashboard pero ya en terminal comun y corriente. Puede hacerlo en la raiz del proyecto.
@@ -89,13 +89,13 @@ Y listo!
 
 ### Notas importantes 🗒️:
 
-Revisar los archivos de ejecución por si las direcciones ip no cuadran, puede que haya que reemplazar en vez de 192.168.100.3 por 192.168.100.4 y asi. Revisar archivo por archivo para que no haya inconvenientes ✅
+- Revisar los archivos de ejecución por si las direcciones ip no cuadran, puede que haya que reemplazar en vez de 192.168.100.3 por 192.168.100.4 y asi. Revisar archivo por archivo para que no haya inconvenientes ✅
 
-La carpeta autos_relacionados que se encuentra ya adjunta es el ejemplo de como deberia quedar el archivo al hacer el 'Paso 3' de esta guía.
+- La carpeta autos_relacionados que se encuentra ya adjunta es el ejemplo de como deberia quedar el archivo al hacer el 'Paso 3' de esta guía.
 
-En caso de ser necesario abrir 2 terminales, una para ejecutar app.py y otra el analisis_final_spark.py
+- En caso de ser necesario abrir 2 terminales, una para ejecutar app.py y otra el analisis_final_spark.py
 
-Tener descargado python3 en la maquina
+- Tener descargado python3 en la maquina
 
 ```bash
 # Comandos:
